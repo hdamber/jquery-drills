@@ -57,12 +57,15 @@ $btnSubmit.click(function () {
     li.append($($someText).val())
     li.appendTo('ul');
 
- // remove list item with a double click
-   li.dblclick(function () {
-        li.remove(li);
-    });
+ 
    
 });
+
+// remove list item with a double click
+
+$('ul').dblclick(function(event) {
+    $(event.target).remove('li');
+  });
 
  
 
